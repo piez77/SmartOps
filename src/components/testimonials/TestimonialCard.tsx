@@ -10,9 +10,7 @@ interface TestimonialCardProps {
 
 export function TestimonialCard({ companyName, websiteUrl, logoUrl, description }: TestimonialCardProps) {
   return (
-    <div className="group relative bg-gradient-to-b from-purple-900/20 to-transparent p-8 rounded-xl backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-blue-600/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-      
+    <div className="group relative bg-white p-8 rounded-xl border border-brand-gray hover:border-brand-purple/30 transition-all duration-300 hover:shadow-xl">
       <div className="relative">
         <div className="flex items-center justify-between mb-6">
           <img 
@@ -22,18 +20,18 @@ export function TestimonialCard({ companyName, websiteUrl, logoUrl, description 
           />
           <div className="flex gap-1">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 text-purple-400 fill-current" />
+              <Star key={i} className="w-5 h-5 text-brand-purple fill-current" />
             ))}
           </div>
         </div>
         
-        <p className="text-gray-300 mb-6 italic">"{description}"</p>
+        <p className="text-brand-charcoal/70 mb-6 italic font-sans-modern">"{description}"</p>
         
-        <a 
+        <a
           href={websiteUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center gap-2"
+          className="text-brand-purple hover:text-brand-purple/80 transition-colors inline-flex items-center gap-2 font-semibold"
         >
           Visita il Sito
           <span className="group-hover:translate-x-1 transition-transform">→</span>

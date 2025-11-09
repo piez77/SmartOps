@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { Logo } from './Logo';
 
 const navLinks = [
   { name: 'Servizi', href: '#services' },
@@ -21,22 +22,19 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-sm border-b border-purple-500/20">
+    <nav className="fixed w-full z-50 bg-brand-white/95 backdrop-blur-sm border-b border-brand-gray shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <Zap className="w-8 h-8 text-purple-400" />
-            <span className="text-2xl font-bold">SmartOps</span>
+        <div className="flex justify-between items-center h-20">
+          <Link to="/" className="flex items-center">
+            <Logo />
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-purple-400 transition-colors"
+                className="text-brand-charcoal/70 hover:text-brand-purple transition-colors font-medium"
                 onClick={closeMenu}
               >
                 {link.name}
@@ -44,15 +42,14 @@ export function Navbar() {
             ))}
             <Link
               to="/contact"
-              className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+              className="px-6 py-3 bg-brand-purple rounded-lg font-semibold text-white hover:bg-brand-purple/90 transition-all hover:shadow-lg"
             >
               Contatti
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-300 hover:text-purple-400 transition-colors"
+            className="md:hidden text-brand-charcoal hover:text-brand-purple transition-colors"
             onClick={toggleMenu}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -60,9 +57,8 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       <div
-        className={`md:hidden absolute w-full bg-black/95 backdrop-blur-sm border-b border-purple-500/20 transition-all duration-300 ${
+        className={`md:hidden absolute w-full bg-brand-white border-b border-brand-gray shadow-lg transition-all duration-300 ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
         }`}
       >
@@ -71,7 +67,7 @@ export function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="block text-gray-300 hover:text-purple-400 transition-colors py-2"
+              className="block text-brand-charcoal/70 hover:text-brand-purple transition-colors py-2 font-medium"
               onClick={closeMenu}
             >
               {link.name}
@@ -79,7 +75,7 @@ export function Navbar() {
           ))}
           <Link
             to="/contact"
-            className="block px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-semibold hover:opacity-90 transition-opacity text-center"
+            className="block px-6 py-3 bg-brand-purple rounded-lg font-semibold text-white hover:bg-brand-purple/90 transition-all text-center"
             onClick={closeMenu}
           >
             Contatti

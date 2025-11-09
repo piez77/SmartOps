@@ -50,19 +50,15 @@ export function OverviewService() {
   };
 
   return (
-    <div className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#4f46e520,transparent)] animate-pulse"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f46e5_1px,transparent_1px),linear-gradient(to_bottom,#4f46e5_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-[0.1]"></div>
-      </div>
+    <div className="relative py-24 overflow-hidden bg-white">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-serif-display font-bold mb-6 text-brand-purple">
             Le Nostre Soluzioni
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Offriamo alle aziende soluzioni all'avanguardia basate sull'automazione e l'intelligenza artificiale
+          <p className="text-xl text-brand-charcoal/70 max-w-3xl mx-auto font-sans-modern">
+            Automazione intelligente e sviluppo web premium per risultati misurabili
           </p>
         </div>
 
@@ -71,21 +67,20 @@ export function OverviewService() {
             <div 
               key={index}
               onClick={(e) => handleScroll(e, service.link)}
-              className={`group relative bg-black/40 backdrop-blur-sm p-8 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 ${service.link ? 'cursor-pointer' : ''}`}
+              className={`group relative bg-white p-8 rounded-xl border border-brand-gray hover:border-brand-purple/30 transition-all duration-300 hover:shadow-xl ${service.link ? 'cursor-pointer' : ''}`}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 to-blue-600/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <div className="relative">
-                <service.icon className="w-12 h-12 text-purple-400 mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300" />
-                <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-purple-400 transition-colors">
+                <service.icon className="w-12 h-12 text-brand-purple mb-6 transform group-hover:scale-105 transition-transform duration-300" />
+                <h3 className="text-2xl font-serif-display font-semibold mb-4 text-brand-charcoal">
                   {service.title}
                 </h3>
-                <p className="text-gray-400 mb-6">
+                <p className="text-brand-charcoal/70 mb-6 font-sans-modern">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.highlights.map((highlight, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></span>
+                    <li key={idx} className="flex items-center text-brand-charcoal/70">
+                      <span className="w-1.5 h-1.5 bg-brand-purple rounded-full mr-2"></span>
                       {highlight}
                     </li>
                   ))}

@@ -25,15 +25,15 @@ export function Benefits() {
       {benefits.map((benefit, index) => (
         <div
           key={index}
-          className="group p-8 rounded-xl bg-gradient-to-b from-purple-900/20 to-transparent hover:from-purple-900/30 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/10"
+          className="group p-8 rounded-xl bg-brand-gray border border-white hover:border-brand-purple/30 transition-all duration-300 hover:shadow-xl"
         >
-          <div className="mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-            <benefit.icon className="w-12 h-12 text-purple-400" />
+          <div className="mb-6 transform group-hover:scale-105 transition-transform duration-300">
+            <benefit.icon className="w-12 h-12 text-brand-purple" />
           </div>
-          <h3 className="text-2xl font-semibold mb-4 text-white group-hover:text-purple-400 transition-colors">
+          <h3 className="text-2xl font-serif-display font-semibold mb-4 text-brand-charcoal">
             {benefit.title}
           </h3>
-          <p className="text-gray-400">{benefit.description}</p>
+          <p className="text-brand-charcoal/70 font-sans-modern">{benefit.description}</p>
         </div>
       ))}
     </div>

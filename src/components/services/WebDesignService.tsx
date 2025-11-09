@@ -73,16 +73,15 @@ const webDesignFeatures = [
 
 export function WebDesignService() {
   return (
-    <div id="web-design" className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f46e5_1px,transparent_1px),linear-gradient(to_bottom,#4f46e5_1px,transparent_1px)] bg-[size:2rem_2rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-[0.1]"></div>
+    <div id="web-design" className="relative py-24 overflow-hidden bg-brand-gray">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-serif-display font-bold mb-6 text-brand-purple">
             Eccellenza nel Web Design
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Progettiamo siti web visivamente straordinari e ad alte prestazioni che convertono i visitatori in clienti fedeli.
+          <p className="text-xl text-brand-charcoal/70 max-w-3xl mx-auto font-sans-modern">
+            Siti web performanti che bilanciano estetica premium e conversioni misurabili.
           </p>
         </div>
 

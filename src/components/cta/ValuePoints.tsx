@@ -25,17 +25,17 @@ export function ValuePoints() {
       {values.map((value, index) => (
         <div
           key={index}
-          className="group p-8 rounded-full bg-gradient-to-b from-purple-900/20 to-transparent hover:from-purple-900/30 transition-all duration-500 hover:scale-105 text-center"
+          className="group p-8 rounded-xl bg-white border border-brand-gray hover:border-brand-purple/30 transition-all duration-300 hover:shadow-lg text-center"
         >
-          <div className="mb-6 transform group-hover:scale-110 transition-all duration-300 inline-block">
-            <div className="p-4 rounded-full bg-purple-500/10">
-              <value.icon className="w-8 h-8 text-purple-400" />
+          <div className="mb-6 transform group-hover:scale-105 transition-transform duration-300 inline-block">
+            <div className="p-4 rounded-full bg-brand-purple/10">
+              <value.icon className="w-8 h-8 text-brand-purple" />
             </div>
           </div>
-          <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-purple-400 transition-colors">
+          <h3 className="text-xl font-serif-display font-semibold mb-2 text-brand-charcoal">
             {value.title}
           </h3>
-          <p className="text-gray-400">{value.description}</p>
+          <p className="text-brand-charcoal/70 font-sans-modern">{value.description}</p>
         </div>
       ))}
     </div>

@@ -10,10 +10,10 @@ export function MetricsCounter() {
     <div className="flex flex-wrap justify-center gap-12 mt-16">
       {metrics.map((metric, index) => (
         <div key={index} className="text-center">
-          <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">
+          <div className="text-5xl md:text-6xl font-serif-display font-bold text-brand-purple mb-2">
             {metric.value}
           </div>
-          <div className="text-gray-400">{metric.label}</div>
+          <div className="text-brand-charcoal/70 font-sans-modern">{metric.label}</div>
         </div>
       ))}
     </div>

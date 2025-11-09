@@ -10,7 +10,7 @@ export function Logo({ variant = 'full', className = '' }: LogoProps) {
     <div className={`flex items-center ${className}`}>
       <span className="text-2xl font-serif-display font-bold tracking-tight">
         <span className="text-brand-purple">Smart</span>
-        <span className="font-sans-modern text-brand-charcoal">Ops</span>
+        <span className="text-brand-charcoal">Ops</span>
       </span>
     </div>
   );

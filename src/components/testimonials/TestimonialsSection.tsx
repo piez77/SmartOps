@@ -13,9 +13,9 @@ const portfolio = [
     logoUrl: "https://res.cloudinary.com/dmc8jmcqc/image/upload/v1738063506/WhatsApp_Image_2025-01-27_at_11.24.09_PM_qa1hbe.png"
   },
   {
-    companyName: "Ruote Celeri",
-    websiteUrl: "https://ruoteceleri.netlify.app/",
-    logoUrl: "https://res.cloudinary.com/dmc8jmcqc/image/upload/v1737194774/Screenshot_2025-01-18_110537_matzkh.png"
+    companyName: "Buftea Capital",
+    websiteUrl: "https://bufteacapital.net/",
+    logoUrl: "https://res.cloudinary.com/dmc8jmcqc/image/upload/v1748264976/Screenshot_2025-05-26_150903_p9betd.png"
   },
   {
     companyName: "Ottica Supervisione",
@@ -58,7 +58,7 @@ export function TestimonialsSection() {
             Portafoglio
           </h2>
           <p className="text-xl text-brand-charcoal/70 max-w-3xl mx-auto font-sans-modern">
-            Progetti realizzati per clienti in diversi settori.
+            Qualunque sia la tua nicchia, rappresenteremo al meglio il tuo brand.
           </p>
         </div>
 

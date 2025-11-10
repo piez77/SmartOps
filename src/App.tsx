@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
-import { AIAssistant } from './components/ai-assistant/AIAssistant';
 import { TestimonialsSection } from './components/testimonials/TestimonialsSection';
 import { FinalCTA } from './components/cta/FinalCTA';
 import { Footer } from './components/Footer';
@@ -14,7 +13,6 @@ function HomePage() {
     <>
       <Hero />
       <Services />
-      <AIAssistant />
       <TestimonialsSection />
       <FinalCTA />
     </>

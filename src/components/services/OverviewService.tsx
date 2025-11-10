@@ -1,19 +1,7 @@
 import React from 'react';
-import { MessageSquareCode, Globe, Bot } from 'lucide-react';
+import { Globe } from 'lucide-react';
 
 const services = [
-  {
-    icon: Bot,
-    title: "Supporto Clienti AI",
-    description: "Sistema di chatbot intelligente che gestisce le richieste dei clienti e la programmazione degli appuntamenti con un tocco umano.",
-    highlights: [
-      "Supporto automatizzato 24/7",
-      "Elaborazione del linguaggio naturale",
-      "Programmazione intelligente degli appuntamenti",
-      "Interazioni personalizzate con i clienti"
-    ],
-    link: "#ai-support"
-  },
   {
     icon: Globe,
     title: "Sviluppo Web",
@@ -25,18 +13,6 @@ const services = [
       "Focus sulle prestazioni"
     ],
     link: "#web-design"
-  },
-  {
-    icon: MessageSquareCode,
-    title: "Outreach Automatizzato",
-    description: "Generazione di lead guidata dall'AI attraverso un coinvolgimento personalizzato dei clienti.",
-    highlights: [
-      "Targeting intelligente dei lead",
-      "Follow-up automatizzati",
-      "Analisi delle campagne",
-      "Ottimizzazione delle conversioni"
-    ],
-    link: "#automated-outreach"
   }
 ];
 
@@ -62,7 +38,7 @@ export function OverviewService() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
           {services.map((service, index) => (
             <div 
               key={index}

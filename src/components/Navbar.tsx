@@ -7,7 +7,7 @@ const navLinks = [
   { name: 'Servizi', href: '#services' },
   { name: 'Web Design', href: '#web-design' },
   { name: 'Supporto AI', href: '#ai-support' },
-  { name: 'Testimonianze', href: '#testimonials' }
+  { name: 'Portafoglio', href: '#testimonials' }
 ];
 
 export function Navbar() {

@@ -4,9 +4,10 @@ import { Menu, X } from 'lucide-react';
 import { Logo } from './Logo';
 
 const navLinks = [
-  { name: 'Servizi', href: '#services' },
-  { name: 'Web Design', href: '#web-design' },
-  { name: 'Portafoglio', href: '#testimonials' }
+  { name: 'Servizi', href: '#services', isRoute: false },
+  { name: 'Web Design', href: '#web-design', isRoute: false },
+  { name: 'Portafoglio', href: '#testimonials', isRoute: false },
+  { name: 'Prezzi', href: '/pricing', isRoute: true }
 ];
 
 export function Navbar() {
@@ -30,14 +31,25 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-brand-charcoal/70 hover:text-brand-purple transition-colors font-medium"
-                onClick={closeMenu}
-              >
-                {link.name}
-              </a>
+              link.isRoute ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-brand-charcoal/70 hover:text-brand-purple transition-colors font-medium"
+                  onClick={closeMenu}
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-brand-charcoal/70 hover:text-brand-purple transition-colors font-medium"
+                  onClick={closeMenu}
+                >
+                  {link.name}
+                </a>
+              )
             ))}
             <Link
               to="/contact"
@@ -63,14 +75,25 @@ export function Navbar() {
       >
         <div className="px-4 py-4 space-y-4">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="block text-brand-charcoal/70 hover:text-brand-purple transition-colors py-2 font-medium"
-              onClick={closeMenu}
-            >
-              {link.name}
-            </a>
+            link.isRoute ? (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="block text-brand-charcoal/70 hover:text-brand-purple transition-colors py-2 font-medium"
+                onClick={closeMenu}
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="block text-brand-charcoal/70 hover:text-brand-purple transition-colors py-2 font-medium"
+                onClick={closeMenu}
+              >
+                {link.name}
+              </a>
+            )
           ))}
           <Link
             to="/contact"

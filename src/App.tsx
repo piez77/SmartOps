@@ -7,6 +7,7 @@ import { TestimonialsSection } from './components/testimonials/TestimonialsSecti
 import { FinalCTA } from './components/cta/FinalCTA';
 import { Footer } from './components/Footer';
 import { Contact } from './components/Contact';
+import PricingSection from './components/ui/pricing-section';
 
 function HomePage() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/pricing" element={<PricingSection />} />
         </Routes>
         <Footer />
       </div>

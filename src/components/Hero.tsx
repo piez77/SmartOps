@@ -19,7 +19,7 @@ export function Hero() {
             Affida a noi la parte più tecnica del tuo business. Siamo la white label agency che costruisce siti web impeccabili, integrati con SEO, CRM e automazioni — pronti per generare risultati, non solo click.
           </p>
           <p className="text-lg text-brand-charcoal/60 mb-8 max-w-2xl mx-auto font-sans-modern">
-            Ti offriamo il primo progetto completo gratuitamente, così puoi testare il nostro livello prima di decidere.
+            Ti offriamo il primo progetto completo gratuitamente, entro 48 ore di tempo dalla commissione, così puoi testare il nostro livello prima di decidere.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

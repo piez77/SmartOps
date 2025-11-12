@@ -2,8 +2,10 @@ import React from 'react';
 
 export function WhiteLabelIntro() {
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-brand-purple/5">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.03),transparent_50%)]"></div>
+
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="space-y-8 animate-fade-in-up">
           <div className="text-center space-y-6">
             <h2 className="text-4xl md:text-5xl font-serif-display font-bold text-brand-purple leading-tight">

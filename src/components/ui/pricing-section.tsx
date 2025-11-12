@@ -228,17 +228,22 @@ export default function PricingSection() {
                   )}
                 </div>
                 <p className="text-sm text-gray-600 mb-4 font-sans-modern">{plan.description}</p>
-                <div className="flex items-baseline">
-                  <span className="text-4xl font-semibold text-gray-900">
-                    €
-                    <NumberFlow
-                      value={isYearly ? plan.yearlyPrice : plan.price}
-                      className="text-4xl font-semibold"
-                    />
-                  </span>
-                  <span className="text-gray-600 ml-1">
-                    /{isYearly ? "anno" : "mese"}
-                  </span>
+                <div>
+                  <div className="flex items-baseline">
+                    <span className="text-4xl font-semibold text-gray-900">
+                      €
+                      <NumberFlow
+                        value={isYearly ? Math.round(plan.yearlyPrice / 12) : plan.price}
+                        className="text-4xl font-semibold"
+                      />
+                    </span>
+                    <span className="text-gray-600 ml-1">
+                      /mese
+                    </span>
+                  </div>
+                  {isYearly && (
+                    <p className="text-sm text-gray-500 mt-1">fatturati annualmente</p>
+                  )}
                 </div>
               </CardHeader>
 

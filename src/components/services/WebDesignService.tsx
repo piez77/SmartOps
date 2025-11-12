@@ -6,7 +6,7 @@ const webDesignFeatures = [
   { 
     icon: Laptop,
     title: "Web Design Personalizzato",
-    description: "Più di un sito web—un'esperienza digitale che genera risultati.",
+    description: "Un'esperienza digitale che genera risultati concreti.",
     features: [
       "Layout unici che riflettono l'identità del brand",
       "Interfacce utente interattive",
@@ -17,7 +17,7 @@ const webDesignFeatures = [
   {
     icon: Smartphone,
     title: "Sviluppo Mobile-First",
-    description: "Siti web all' avanguardia che funzionano perfettamente su tutti i dispositivi.",
+    description: "Siti all'avanguardia che funzionano su tutti i dispositivi.",
     features: [
       "Architettura interattiva",
       "Interfacce touch-friendly",
@@ -28,7 +28,7 @@ const webDesignFeatures = [
   {
     icon: Search,
     title: "SEO e Prestazioni",
-    description: "Siti web velocissimi ottimizzati per i motori di ricerca e l'esperienza dell' utente.",
+    description: "Siti velocissimi ottimizzati per SEO ed esperienza utente.",
     features: [
       "Struttura ottimizzata per SEO",
       "Tempi di caricamento rapidi",
@@ -39,7 +39,7 @@ const webDesignFeatures = [
   {
     icon: Bot,
     title: "Integrazione AI",
-    description: "Funzionalità intelligenti che migliorano il coinvolgimento e la conversione degli utenti.",
+    description: "Funzionalità AI che migliorano coinvolgimento e conversioni.",
     features: [
       "Chatbot basati su AI",
       "Raccomandazioni personalizzate",
@@ -81,7 +81,7 @@ export function WebDesignService() {
 Perché le agenzie più intelligenti scelgono SmartOps
           </h2>
           <p className="text-xl text-brand-charcoal/70 max-w-3xl mx-auto font-sans-modern">
-Non vendiamo solo siti web ma tranquillità, margini prevedibili e risultati che parlano da soli.
+Non vendiamo solo siti web. Offriamo tranquillità, margini prevedibili e risultati concreti.
           </p>
         </div>
 

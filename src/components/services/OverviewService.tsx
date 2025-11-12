@@ -62,19 +62,23 @@ export function OverviewService() {
           }`}
         >
           <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
-            Ogni agenzia conosce la storia: il progetto parte con entusiasmo, poi arrivano ritardi, revisioni infinite e clienti impazienti. Coordinare freelance è un incubo, costruire un team interno costa tempo, stipendi e gestione che spesso le piccole e medie realtà non possono permettersi.
+            Ogni agenzia conosce questa storia. Il progetto parte bene. Poi arrivano i ritardi. Le revisioni infinite. I clienti impazienti.
           </p>
 
           <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
-            Il risultato? Margini erosi, reputazione a rischio e meno tempo per ciò che davvero conta: far crescere i clienti (e l'agenzia).
+            Coordinare freelance è un incubo. Costruire un team interno costa troppo: stipendi, gestione, tempo. Le piccole e medie agenzie non possono permetterselo.
           </p>
 
           <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
-            Noi conosciamo bene queste sfide e abbiamo costruito soluzioni su misura per chi vuole la solidità di un team interno, ma senza il peso di costi fissi esorbitanti. Consegne rapide, qualità costante, processi trasparenti: tutto sotto il vostro marchio, come se lo aveste fatto voi.
+            <strong className="text-brand-purple">Il risultato?</strong> Margini erosi. Reputazione a rischio. Meno tempo per far crescere i clienti e l'agenzia.
+          </p>
+
+          <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
+            Noi offriamo soluzioni diverse. La solidità di un team interno. Senza costi fissi esorbitanti. Consegne rapide. Qualità costante. Processi trasparenti.
           </p>
 
           <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-10">
-            Così potete dire addio al caos operativo e tornare a concentrarvi su ciò che fate meglio: vendere, creare strategie e far crescere il vostro business.
+            Tutto sotto il vostro marchio. Come se lo aveste fatto voi. Dite addio al caos. Tornate a vendere, creare strategie e far crescere il business.
           </p>
         </div>
 

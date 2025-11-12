@@ -18,19 +18,33 @@ export function WhiteLabelIntro() {
 
           <div className="prose prose-lg max-w-none text-brand-charcoal/70 font-sans-modern leading-relaxed space-y-6">
             <p>
-              SmartOps è nata per risolvere un problema che ogni agenzia conosce: troppi progetti, troppo poco tempo, e margini che si assottigliano a ogni revisione. Il nostro sistema white-label vi permette di offrire ai vostri clienti siti e landing di alto livello, senza assumere, coordinare o formare nessuno.
+              <strong className="text-brand-purple">SmartOps risolve il problema più grande delle agenzie:</strong> troppi progetti, poco tempo, margini che si assottigliano.
             </p>
 
             <p>
-              Ecco come funziona: voi vendete il progetto con il vostro brand. Noi lo realizziamo — silenziosamente, dietro le quinte — e in massimo tre giorni vi consegniamo un lavoro finito, pronto per la consegna al cliente finale. Nessun ritardo, nessuna complessità. Solo risultati misurabili e prevedibili.
+              Il nostro sistema white-label vi permette di offrire siti e landing di alto livello. Senza assumere. Senza coordinare. Senza formare nessuno.
+            </p>
+
+            <div className="bg-purple-50 border-l-4 border-brand-purple pl-6 py-4 my-8 rounded-r-lg">
+              <p className="font-semibold text-brand-purple mb-3 text-lg">Come funziona:</p>
+              <ol className="space-y-2 list-decimal list-inside text-brand-charcoal/80">
+                <li>Voi vendete il progetto con il vostro brand</li>
+                <li>Noi lo realizziamo dietro le quinte</li>
+                <li>In 3 giorni vi consegniamo il lavoro finito</li>
+                <li>Voi lo consegnate al cliente finale</li>
+              </ol>
+            </div>
+
+            <p>
+              Nessun ritardo. Nessuna complessità. Solo risultati misurabili e prevedibili.
             </p>
 
             <p>
-              Le agenzie che ci scelgono lo fanno per una ragione semplice: ogni progetto diventa profitto certo, non una fonte di stress. Con i nostri piani mensili a prezzo fisso potete pianificare i margini fin dal preventivo, senza sorprese o costi extra.
+              Con i nostri piani mensili a prezzo fisso, pianificate i margini fin dal preventivo. Nessuna sorpresa. Nessun costo extra.
             </p>
 
-            <p>
-              SmartOps non è un fornitore. È il vostro team interno, ma senza buste paga, ferie o riunioni infinite. Ogni sito è costruito come se fosse vostro — perché lo è. Noi restiamo invisibili, voi restate brillanti.
+            <p className="text-xl font-semibold text-brand-purple pt-4">
+              SmartOps non è un fornitore. È il vostro team interno — senza buste paga, ferie o riunioni infinite.
             </p>
           </div>
         </div>

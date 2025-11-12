@@ -13,13 +13,13 @@ export function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-serif-display font-bold mb-8 text-brand-purple leading-tight">
-            Il tuo primo sito SmartOps è gratis.<br />Il prossimo lo pagheranno i tuoi clienti.
+            Il tuo primo sito è gratis.<br />Il prossimo lo pagano i tuoi clienti.
           </h1>
           <p className="text-xl md:text-2xl text-brand-charcoal/70 mb-12 max-w-3xl mx-auto font-sans-modern leading-relaxed">
-            Affida a noi la parte più tecnica del tuo business. Siamo la white label agency che costruisce siti web impeccabili, integrati con SEO, CRM e automazioni — pronti per generare risultati, non solo click.
+            Siamo la white label agency che costruisce siti web impeccabili per la tua agenzia. SEO, CRM e automazioni integrate. Risultati reali, non solo click.
           </p>
           <p className="text-lg text-brand-charcoal/60 mb-8 max-w-2xl mx-auto font-sans-modern">
-            Ti offriamo il primo progetto completo gratuitamente, entro 48 ore di tempo dalla commissione, così puoi testare il nostro livello prima di decidere.
+            Primo progetto gratuito. Consegna in 48 ore. Testa il nostro livello prima di decidere.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

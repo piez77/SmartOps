@@ -44,7 +44,7 @@ export function OverviewService() {
           }`}
         >
           <h2 className="text-3xl md:text-5xl font-serif-display font-bold mb-6 text-brand-charcoal leading-tight">
-            Basta ritardi, margini che si assottigliano e notti insonni — senza dover assumere nessuno in più
+            100% di margini 0% dello stress
           </h2>
           <p
             className={`text-xl md:text-2xl text-brand-charcoal/80 max-w-4xl mx-auto font-sans-modern transition-all duration-1000 delay-200 ${
@@ -93,7 +93,7 @@ export function OverviewService() {
                   transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
                 }}
               >
-                <X className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
+                <X className="w-6 h-6 text-black flex-shrink-0 mt-1" />
                 <span className="text-brand-charcoal/80 text-lg leading-relaxed">
                   {problem}
                 </span>

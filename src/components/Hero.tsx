@@ -23,7 +23,7 @@ export function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:smartoperationsweb@gmail.com"
+              href="mailto:smartoperationsweb@gmail.com?subject=Richiesta%20Informazioni%20SmartOps&body=Ciao%20SmartOps%2C%0A%0AVorrei%20ricevere%20maggiori%20informazioni%20sui%20vostri%20servizi%20white%20label.%0A%0AGrazie"
               className="group relative px-10 py-5 bg-gradient-to-r from-brand-purple via-purple-600 to-brand-purple bg-size-200 bg-pos-0 hover:bg-pos-100 rounded-xl font-bold text-xl text-white flex items-center justify-center gap-3 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-purple/40 hover:scale-105 animate-pulse-glow"
             >
               <span className="relative z-10">Scrivici Ora</span>

@@ -5,7 +5,7 @@ export function CTAButton() {
   return (
     <div className="text-center">
       <a
-        href="https://calendly.com/pietrocanazza16/smartops"
+        href="https://calendly.com/pietrocanazza16/smartops?month=2025-11"
         target="_blank"
         rel="noopener noreferrer"
         className="group px-8 py-4 bg-brand-purple rounded-lg font-semibold text-lg text-white inline-flex items-center gap-2 hover:bg-brand-purple/90 transition-all hover:shadow-xl hover:shadow-brand-purple/20"

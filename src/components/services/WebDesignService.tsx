@@ -78,7 +78,7 @@ export function WebDesignService() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-serif-display font-bold mb-6 text-brand-purple">
-            Eccellenza nel Web Design
+Perché le agenzie più intelligenti scelgono SmartOps
           </h2>
           <p className="text-xl text-brand-charcoal/70 max-w-3xl mx-auto font-sans-modern">
             Siti web performanti che bilanciano estetica premium e conversioni misurabili.

@@ -249,7 +249,9 @@ export default function PricingSection() {
 
               <CardContent className="pt-0">
                 <a
-                  href="mailto:smartoperationsweb@gmail.com"
+                  href="https://calendly.com/pietrocanazza16/smartops?month=2025-11"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`block w-full mb-6 p-4 text-xl text-center rounded-xl transition-all duration-300 ${
                     plan.popular
                       ? "bg-gradient-to-t from-brand-purple to-purple-600 shadow-lg shadow-brand-purple/50 border border-purple-400 text-white hover:shadow-xl hover:shadow-brand-purple/60"
@@ -328,7 +330,9 @@ export default function PricingSection() {
             Scopri la qualità del nostro lavoro senza spendere un euro — il primo progetto è offerto da noi.
           </p>
           <a
-            href="mailto:smartoperationsweb@gmail.com"
+            href="https://calendly.com/pietrocanazza16/smartops?month=2025-11"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-brand-purple via-purple-600 to-brand-purple bg-size-200 bg-pos-0 hover:bg-pos-100 rounded-xl font-bold text-xl text-white transition-all duration-500 hover:shadow-2xl hover:shadow-brand-purple/40 hover:scale-105"
           >
             Inizia gratis →

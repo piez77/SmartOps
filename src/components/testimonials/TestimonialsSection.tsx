@@ -58,7 +58,7 @@ export function TestimonialsSection() {
             Portafoglio
           </h2>
           <p className="text-xl text-brand-charcoal/70 max-w-3xl mx-auto font-sans-modern">
-            Qualunque sia la tua nicchia, rappresenteremo al meglio il tuo brand.
+            Qualunque sia la nicchia, rappresenteremo al meglio il brand dei nostri clienti.
           </p>
         </div>
 

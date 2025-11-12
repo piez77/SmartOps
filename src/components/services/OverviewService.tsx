@@ -43,8 +43,8 @@ export function OverviewService() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <h2 className="text-3xl md:text-5xl font-serif-display font-bold mb-6 text-brand-charcoal leading-tight">
-            Basta ritardi, margini che si assottigliano e notti insonni — senza dover assumere nessuno in più
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif-display font-bold mb-6 text-brand-charcoal leading-tight">
+            100% dei margini, 0% dello stress
           </h2>
           <p
             className={`text-xl md:text-2xl text-brand-charcoal/80 max-w-4xl mx-auto font-sans-modern transition-all duration-1000 delay-200 ${
@@ -93,7 +93,7 @@ export function OverviewService() {
                   transform: isVisible ? 'translateY(0)' : 'translateY(20px)'
                 }}
               >
-                <X className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
+                <X className="w-6 h-6 text-brand-charcoal flex-shrink-0 mt-1 font-bold stroke-[3]" />
                 <span className="text-brand-charcoal/80 text-lg leading-relaxed">
                   {problem}
                 </span>

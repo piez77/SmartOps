@@ -21,6 +21,16 @@ export function Navbar() {
     setIsOpen(false);
   };
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    closeMenu();
+
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <nav className="fixed w-full z-50 bg-brand-white/95 backdrop-blur-sm border-b border-brand-gray shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,7 +45,7 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 className="text-brand-charcoal/70 hover:text-brand-purple transition-colors font-medium"
-                onClick={closeMenu}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
               </a>
@@ -68,7 +78,7 @@ export function Navbar() {
               key={link.name}
               href={link.href}
               className="block text-brand-charcoal/70 hover:text-brand-purple transition-colors py-2 font-medium"
-              onClick={closeMenu}
+              onClick={(e) => handleNavClick(e, link.href)}
             >
               {link.name}
             </a>

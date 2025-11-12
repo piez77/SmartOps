@@ -44,7 +44,7 @@ export function OverviewService() {
           }`}
         >
           <h2 className="text-3xl md:text-5xl font-serif-display font-bold mb-6 text-brand-charcoal leading-tight">
-            100% di margini 0% dello stress
+            100% DI MARGINI 0% DELLO STRESS
           </h2>
           <p
             className={`text-xl md:text-2xl text-brand-charcoal/80 max-w-4xl mx-auto font-sans-modern transition-all duration-1000 delay-200 ${

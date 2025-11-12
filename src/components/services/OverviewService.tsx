@@ -77,9 +77,28 @@ export function OverviewService() {
             Noi offriamo soluzioni diverse. La solidità di un team interno. Senza costi fissi esorbitanti. Consegne rapide. Qualità costante. Processi trasparenti.
           </p>
 
-          <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-10">
+          <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
             Tutto sotto il vostro marchio. Come se lo aveste fatto voi. Dite addio al caos. Tornate a vendere, creare strategie e far crescere il business.
           </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <a
+              href="#pricing"
+              className="inline-flex items-center justify-center px-8 py-4 bg-brand-purple text-white rounded-lg font-semibold hover:bg-brand-purple/90 transition-all hover:shadow-lg"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#pricing')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Vedi i Prezzi
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-brand-purple text-brand-purple rounded-lg font-semibold hover:bg-brand-purple hover:text-white transition-all"
+            >
+              Richiedi Informazioni
+            </a>
+          </div>
         </div>
 
         <div

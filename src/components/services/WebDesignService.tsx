@@ -96,6 +96,33 @@ Non vendiamo solo siti web. Offriamo tranquillità, margini prevedibili e risult
             />
           ))}
         </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-lg text-brand-charcoal/70 mb-6 font-sans-modern">
+            Pronto a vedere come lavoriamo?{' '}
+            <a
+              href="#testimonials"
+              className="text-brand-purple hover:underline font-semibold"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#testimonials')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              Esplora il nostro portfolio
+            </a>
+            {' '}oppure{' '}
+            <a
+              href="#pricing"
+              className="text-brand-purple hover:underline font-semibold"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#pricing')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              scopri i piani pensati per te
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

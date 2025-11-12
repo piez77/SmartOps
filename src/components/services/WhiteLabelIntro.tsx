@@ -46,6 +46,30 @@ export function WhiteLabelIntro() {
             <p className="text-xl font-semibold text-brand-purple pt-4">
               SmartOps non è un fornitore. È il vostro team interno — senza buste paga, ferie o riunioni infinite.
             </p>
+
+            <div className="flex flex-wrap gap-4 justify-center mt-8 pt-6 border-t border-brand-purple/20">
+              <a
+                href="#web-design"
+                className="text-brand-purple hover:text-brand-purple/80 font-medium underline"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#web-design')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Scopri tutti i servizi web design →
+              </a>
+              <span className="text-brand-charcoal/30">|</span>
+              <a
+                href="#testimonials"
+                className="text-brand-purple hover:text-brand-purple/80 font-medium underline"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.querySelector('#testimonials')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Vedi i nostri progetti →
+              </a>
+            </div>
           </div>
         </div>
       </div>

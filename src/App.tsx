@@ -7,6 +7,7 @@ import { TestimonialsSection } from './components/testimonials/TestimonialsSecti
 import { FinalCTA } from './components/cta/FinalCTA';
 import { Footer } from './components/Footer';
 import { Contact } from './components/Contact';
+import { BackToTop } from './components/BackToTop';
 import PricingSection from './components/ui/pricing-section';
 
 function HomePage() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
+        <BackToTop />
       </div>
     </Router>
   );

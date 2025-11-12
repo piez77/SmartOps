@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Phone } from 'lucide-react';
+import { Breadcrumb } from './Breadcrumb';
 
 export function Contact() {
   return (
@@ -11,6 +12,8 @@ export function Contact() {
         </div>
 
         <div className="relative">
+          <Breadcrumb items={[{ label: 'Contatti' }]} />
+
           <h1 className="text-4xl md:text-5xl font-serif-display font-bold mb-12 text-center text-brand-purple">
             Contattaci
           </h1>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowDown } from 'lucide-react';
 import { openVoiceflowAssistant } from '../utils/voiceflow';
 
 export function Hero() {
@@ -30,9 +30,20 @@ export function Hero() {
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300 relative z-10" />
               <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500"></div>
             </a>
+            <a
+              href="#pricing"
+              className="group px-10 py-5 bg-white border-2 border-brand-purple rounded-xl font-bold text-xl text-brand-purple flex items-center justify-center gap-3 transition-all duration-300 hover:bg-brand-purple hover:text-white hover:shadow-xl"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector('#pricing')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              <span>Scopri i Piani</span>
+              <ArrowDown className="w-6 h-6 group-hover:translate-y-1 transition-transform duration-300" />
+            </a>
           </div>
           <p className="text-sm text-brand-charcoal/50 mt-6 font-sans-modern">
-            Ti invieremo il tuo sito pilota, chiavi in mano.
+            Ti invieremo il tuo sito pilota, chiavi in mano. <a href="#services" className="text-brand-purple hover:underline font-medium" onClick={(e) => { e.preventDefault(); document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' }); }}>Scopri come funziona</a>
           </p>
         </div>
       </div>

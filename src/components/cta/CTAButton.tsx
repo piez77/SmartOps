@@ -14,7 +14,7 @@ export function CTAButton() {
         Prenota Ora la Tua Chiamata Gratuita
       </a>
       <p className="mt-4 text-brand-charcoal/70 font-sans-modern">
-        È gratuito, facile e richiede solo 15 minuti per esplorare le possibilità!
+        Prenota ora la tua chiamata gratuita — bastano 15 minuti per scoprire come offrire più servizi, con meno stress e più margini.
       </p>
     </div>
   );

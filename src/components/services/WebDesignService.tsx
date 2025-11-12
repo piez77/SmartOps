@@ -81,7 +81,7 @@ export function WebDesignService() {
 Perché le agenzie più intelligenti scelgono SmartOps
           </h2>
           <p className="text-xl text-brand-charcoal/70 max-w-3xl mx-auto font-sans-modern">
-            Siti web performanti che bilanciano estetica premium e conversioni misurabili.
+Non vendiamo solo siti web ma tranquillità, margini prevedibili e risultati che parlano da soli.
           </p>
         </div>
 

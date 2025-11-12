@@ -233,7 +233,7 @@ export default function PricingSection() {
                     <span className="text-4xl font-semibold text-gray-900">
                       €
                       <NumberFlow
-                        value={isYearly ? Math.round(plan.yearlyPrice / 12) : plan.price}
+                        value={isYearly ? plan.yearlyPrice : plan.price}
                         className="text-4xl font-semibold"
                       />
                     </span>

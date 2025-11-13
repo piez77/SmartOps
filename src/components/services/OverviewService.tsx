@@ -35,7 +35,7 @@ export function OverviewService() {
   }, []);
 
   return (
-    <div ref={sectionRef} className="relative py-24 overflow-hidden bg-white">
+    <div ref={sectionRef} className="relative pt-16 pb-24 overflow-hidden bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
         <div

@@ -10,7 +10,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(106,76,255,0.06),transparent_50%)]"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 pb-20 text-center">
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-serif-display font-bold mb-8 text-brand-purple leading-tight">
             Il tuo primo sito è gratis.<br />Il prossimo lo pagano i tuoi clienti.

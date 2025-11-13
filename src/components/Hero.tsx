@@ -13,10 +13,13 @@ export function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 pb-20 text-center">
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-serif-display font-bold mb-8 text-brand-purple leading-tight">
-            Il tuo primo sito è gratis.<br />Il prossimo lo pagano i tuoi clienti.
+            Servizi Web Design White Label per Agenzie
           </h1>
+          <p className="text-2xl md:text-3xl text-brand-charcoal/80 mb-6 max-w-3xl mx-auto font-sans-modern leading-tight font-medium">
+            Il tuo primo sito è gratis. Il prossimo lo pagano i tuoi clienti.
+          </p>
           <p className="text-xl md:text-2xl text-brand-charcoal/70 mb-12 max-w-3xl mx-auto font-sans-modern leading-relaxed">
-            Siamo la white label agency che costruisce siti web impeccabili per la tua agenzia. SEO, CRM e automazioni integrate. Risultati reali, non solo click.
+            Partner white label per agenzie: costruiamo siti web, landing page ed e-commerce pronti da rivendere sotto il tuo brand. SEO, CRM e automazioni integrate.
           </p>
           <p className="text-lg text-brand-charcoal/60 mb-8 max-w-2xl mx-auto font-sans-modern">
             Primo progetto gratuito. Consegna in 48 ore. Testa il nostro livello prima di decidere.

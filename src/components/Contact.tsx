@@ -14,9 +14,9 @@ export function Contact() {
         <div className="relative">
           <Breadcrumb items={[{ label: 'Contatti' }]} />
 
-          <h1 className="text-4xl md:text-5xl font-serif-display font-bold mb-12 text-center text-brand-purple">
+          <h2 className="text-4xl md:text-5xl font-serif-display font-bold mb-12 text-center text-brand-purple">
             Contattaci
-          </h1>
+          </h2>
 
           <div className="grid gap-8 max-w-2xl mx-auto">
             <a
@@ -25,7 +25,7 @@ export function Contact() {
             >
               <div className="flex items-center gap-4 mb-4">
                 <Mail className="w-6 h-6 text-brand-purple group-hover:scale-105 transition-transform" />
-                <h2 className="text-2xl font-serif-display font-semibold text-brand-charcoal">Email</h2>
+                <h3 className="text-2xl font-serif-display font-semibold text-brand-charcoal">Email</h3>
               </div>
               <span className="text-lg text-brand-charcoal/70 group-hover:text-brand-purple transition-colors font-sans-modern">
                 smartoperationsweb@gmail.com
@@ -38,7 +38,7 @@ export function Contact() {
             >
               <div className="flex items-center gap-4 mb-4">
                 <Phone className="w-6 h-6 text-brand-purple group-hover:scale-105 transition-transform" />
-                <h2 className="text-2xl font-serif-display font-semibold text-brand-charcoal">Telefono</h2>
+                <h3 className="text-2xl font-serif-display font-semibold text-brand-charcoal">Telefono</h3>
               </div>
               <span className="text-lg text-brand-charcoal/70 group-hover:text-brand-purple transition-colors font-sans-modern">
                 +39 339 376 7851

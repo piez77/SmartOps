@@ -4,7 +4,7 @@ import { TimelineContent } from "@/components/ui/timeline-animation";
 import NumberFlow from "@number-flow/react";
 import { Globe, Zap, Headphones, CheckCheck } from "lucide-react";
 import { motion } from "motion/react";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 const plans = [
   {
@@ -125,6 +125,7 @@ const PricingSwitch = ({ onSwitch }: { onSwitch: (value: string) => void }) => {
 
 export default function PricingSection() {
   const [isYearly, setIsYearly] = useState(false);
+  const [forceVisible, setForceVisible] = useState(false);
   const pricingRef = useRef<HTMLDivElement>(null);
 
   const revealVariants = {
@@ -133,19 +134,26 @@ export default function PricingSection() {
       opacity: 1,
       filter: "blur(0px)",
       transition: {
-        delay: i * 0.4,
-        duration: 0.5,
+        delay: i * 0.15,
+        duration: 0.4,
       },
     }),
     hidden: {
       filter: "blur(10px)",
       y: -20,
-      opacity: 0,
+      opacity: forceVisible ? 1 : 0,
     },
   };
 
   const togglePricingPeriod = (value: string) =>
     setIsYearly(Number.parseInt(value) === 1);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setForceVisible(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="px-4 pt-20 min-h-screen mx-auto relative bg-neutral-100" ref={pricingRef} id="pricing">

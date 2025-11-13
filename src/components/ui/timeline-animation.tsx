@@ -33,7 +33,7 @@ export function TimelineContent({
   className,
   customVariants,
 }: TimelineContentProps) {
-  const isInView = useInView(timelineRef, { once: true, amount: 0.3 });
+  const isInView = useInView(timelineRef, { once: true, amount: 0.1 });
 
   const defaultVariants = {
     visible: (i: number) => ({

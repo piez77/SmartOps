@@ -76,7 +76,7 @@ export function WebDesignService() {
     <div id="web-design" className="relative py-24 overflow-hidden bg-brand-gray">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16 animate-fade-in-up">
+        <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-serif-display font-bold mb-6 text-brand-purple">
 Perché le agenzie più intelligenti scelgono SmartOps
           </h2>

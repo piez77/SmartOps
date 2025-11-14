@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
-import { TestimonialsSection } from './components/testimonials/TestimonialsSection';
 import { FinalCTA } from './components/cta/FinalCTA';
 import { Footer } from './components/Footer';
 import { Contact } from './components/Contact';
@@ -18,7 +17,6 @@ function HomePage() {
       <Hero />
       <Services />
       <PortfolioGrid items={portfolioItems} />
-      <TestimonialsSection />
       <PricingSection />
       <FinalCTA />
     </>

@@ -3,77 +3,77 @@ import { PortfolioItem } from '../types/portfolio';
 export const portfolioItems: PortfolioItem[] = [
   {
     id: '1',
-    title: 'E-commerce Fashion Store',
-    description: 'Modern online boutique with integrated checkout and inventory management',
-    industry: 'E-commerce',
-    imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=450&fit=crop',
-    projectUrl: 'https://example.com/fashion-store',
+    title: 'W.G. Montaggi',
+    description: 'Sito web professionale per azienda specializzata in montaggi industriali',
+    industry: 'Industria',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1737792954/Screenshot_2025-01-25_091525_thrydh.png',
+    projectUrl: 'https://wgmontaggi.com/',
     featured: true
   },
   {
     id: '2',
-    title: 'Restaurant Booking Platform',
-    description: 'Reservation system with real-time availability and automated confirmations',
-    industry: 'Hospitality',
-    imageUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=450&fit=crop',
-    projectUrl: 'https://example.com/restaurant-booking'
+    title: 'M.GM. Colors',
+    description: 'E-commerce moderno per vendita di prodotti di pittura e coloranti',
+    industry: 'E-commerce',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1738063506/WhatsApp_Image_2025-01-27_at_11.24.09_PM_qa1hbe.png',
+    projectUrl: 'https://mgmcolors.com/'
   },
   {
     id: '3',
-    title: 'Real Estate Listings',
-    description: 'Property showcase with interactive maps and virtual tour integration',
-    industry: 'Real Estate',
-    imageUrl: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=450&fit=crop',
-    projectUrl: 'https://example.com/real-estate'
+    title: 'Buftea Capital',
+    description: 'Piattaforma finanziaria per servizi di investimento e consulenza',
+    industry: 'Finanza',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1748264976/Screenshot_2025-05-26_150903_p9betd.png',
+    projectUrl: 'https://bufteacapital.net/'
   },
   {
     id: '4',
-    title: 'Fitness Studio Website',
-    description: 'Class booking system with membership management and online payments',
-    industry: 'Health & Fitness',
-    imageUrl: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=450&fit=crop',
-    projectUrl: 'https://example.com/fitness-studio'
+    title: 'Ottica Supervisione',
+    description: 'Sito vetrina per centro ottico con catalogo prodotti e servizi',
+    industry: 'Retail',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1756998673/474777750_629139916324199_6078298961544040115_n_fskuxa.jpg',
+    projectUrl: 'https://otticasupervisione.it/'
   },
   {
     id: '5',
-    title: 'Professional Services Portal',
-    description: 'Corporate website with lead capture forms and service showcase',
-    industry: 'Consulting',
-    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=450&fit=crop',
-    projectUrl: 'https://example.com/professional-services',
+    title: 'Egina',
+    description: 'Portale corporate per servizi professionali B2B',
+    industry: 'Servizi',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1761375116/Immagine_WhatsApp_2025-10-25_ore_08.49.24_82711686_ukavss.jpg',
+    projectUrl: 'https://egina.net/',
     featured: true
   },
   {
     id: '6',
-    title: 'Beauty Salon Booking',
-    description: 'Appointment scheduling with staff management and service catalog',
-    industry: 'Beauty & Wellness',
-    imageUrl: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&h=450&fit=crop',
-    projectUrl: 'https://example.com/beauty-salon'
+    title: "Gioielleria L'Aura d'Oro",
+    description: 'E-commerce elegante per gioielleria con catalogo premium',
+    industry: 'Gioielleria',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1752165289/Immagine_WhatsApp_2025-07-10_ore_18.34.12_f4833a05_clucbg.jpg',
+    projectUrl: 'https://lauradoroshop.com/'
   },
   {
     id: '7',
-    title: 'Educational Platform',
-    description: 'Online course website with student portal and progress tracking',
-    industry: 'Education',
-    imageUrl: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=450&fit=crop',
-    projectUrl: 'https://example.com/education-platform'
+    title: 'Estetica e Benessere My Style',
+    description: 'Sito per centro estetico con prenotazione online e gallery servizi',
+    industry: 'Benessere',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1746716232/LOGO_byzf0b_avvccp.jpg',
+    projectUrl: 'https://esteticaebenesseremystyle.com/'
   },
   {
     id: '8',
-    title: 'Local Business Directory',
-    description: 'Community marketplace with business listings and review system',
-    industry: 'Local Services',
-    imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=450&fit=crop',
-    projectUrl: 'https://example.com/business-directory'
+    title: 'Celeste Impresa di Pulizie',
+    description: 'Landing page per impresa di pulizie con richiesta preventivi',
+    industry: 'Servizi',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1746389313/Screenshot_2025-05-04_220753_yqtlmj.png',
+    projectUrl: 'https://celesteservice.com/'
   },
   {
     id: '9',
-    title: 'Tech Startup Landing',
-    description: 'Product launch page with waitlist and investor pitch sections',
-    industry: 'Technology',
-    imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop',
-    projectUrl: 'https://example.com/tech-startup',
+    title: "Gab's Afrobeauty",
+    description: 'E-commerce specializzato in prodotti di bellezza afro',
+    industry: 'Beauty',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1742895573/Immagine_WhatsApp_2025-03-24_ore_19.10.16_3434b278_tznfp5.jpg',
+    projectUrl: 'https://gabsafrobeauty.com/',
     featured: true
   }
 ];

@@ -33,9 +33,9 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
 
   return (
     <section
-      id="portfolio"
+      id="testimonials"
       ref={sectionRef}
-      className="relative py-20 md:py-32 bg-white overflow-hidden"
+      className="relative py-20 md:py-32 bg-brand-gray overflow-hidden"
     >
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(91,33,182,0.08),transparent_50%)]"></div>
@@ -49,10 +49,10 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-serif-display font-bold mb-6 text-brand-purple">
-            I Nostri Progetti
+            Portfolio
           </h2>
           <p className="text-xl text-brand-charcoal/70 max-w-3xl mx-auto font-sans-modern leading-relaxed">
-            Siti web professionali realizzati per agenzie come la tua. Ogni progetto è stato consegnato in tempo, completamente white label e pronto per essere rivenduto ai clienti finali.
+            Qualunque sia la nicchia, rappresentiamo al meglio il brand dei nostri clienti.
           </p>
         </div>
 

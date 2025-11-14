@@ -23,7 +23,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Buftea Capital',
     description: 'Sito istituzionale creato per un hedge fund orientato a investimenti finanziari avanzati',
     industry: 'Hedge Fund',
-    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1748264976/Screenshot_2025-05-26_150903_p9betd.png',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1763136514/Screenshot_2025-11-14_170410_s1eeaw.png',
     projectUrl: 'https://bufteacapital.net/'
   },
   {
@@ -39,7 +39,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Egina Coffee Wine Food',
     description: 'Piattaforma web elegante sviluppata per un locale dedicato a caffetteria, vini e cucina gourmet',
     industry: 'Ristorazione',
-    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1761375116/Immagine_WhatsApp_2025-10-25_ore_08.49.24_82711686_ukavss.jpg',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1763136486/Screenshot_2025-11-14_170653_nax23c.png',
     projectUrl: 'https://egina.net/',
     featured: true
   },
@@ -48,7 +48,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "L'Aura d'Oro",
     description: 'E-commerce raffinato progettato per una gioielleria specializzata in pezzi preziosi e artigianali',
     industry: 'Gioielleria',
-    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1752165289/Immagine_WhatsApp_2025-07-10_ore_18.34.12_f4833a05_clucbg.jpg',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1763136502/Screenshot_2025-11-14_170632_v08ov1.png',
     projectUrl: 'https://lauradoroshop.com/'
   },
   {

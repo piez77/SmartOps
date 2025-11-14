@@ -62,7 +62,7 @@ export function PortfolioCard({
         />
 
         <div
-          className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent transition-all duration-300 ${
+          className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/50 to-transparent transition-all duration-300 ${
             isExpanded
               ? 'h-full opacity-100'
               : 'h-0 opacity-0 group-hover:h-full group-hover:opacity-100 md:h-20 md:opacity-100'

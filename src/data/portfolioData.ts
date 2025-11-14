@@ -6,7 +6,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'W.G. Montaggi',
     description: 'Sito web professionale per azienda specializzata in montaggi industriali',
     industry: 'Industria',
-    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1737792954/Screenshot_2025-01-25_091525_thrydh.png',
+    imageUrl: 'https://res.cloudinary.com/dmc8jmcqc/image/upload/v1763136708/Screenshot_2025-11-14_171125_pfwnhh.png',
     projectUrl: 'https://wgmontaggi.com/',
     featured: true
   },

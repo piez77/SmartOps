@@ -9,12 +9,15 @@ import { Footer } from './components/Footer';
 import { Contact } from './components/Contact';
 import { BackToTop } from './components/BackToTop';
 import PricingSection from './components/ui/pricing-section';
+import { PortfolioGrid } from './components/portfolio/PortfolioGrid';
+import { portfolioItems } from './data/portfolioData';
 
 function HomePage() {
   return (
     <>
       <Hero />
       <Services />
+      <PortfolioGrid items={portfolioItems} />
       <TestimonialsSection />
       <PricingSection />
       <FinalCTA />

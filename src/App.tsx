@@ -10,6 +10,7 @@ import { BackToTop } from './components/BackToTop';
 import PricingSection from './components/ui/pricing-section';
 import { PortfolioGrid } from './components/portfolio/PortfolioGrid';
 import { portfolioItems } from './data/portfolioData';
+import { FAQ } from './components/FAQ';
 
 function HomePage() {
   return (
@@ -18,6 +19,7 @@ function HomePage() {
       <Services />
       <PortfolioGrid items={portfolioItems} />
       <PricingSection />
+      <FAQ />
       <FinalCTA />
     </>
   );

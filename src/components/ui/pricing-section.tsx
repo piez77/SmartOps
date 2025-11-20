@@ -8,17 +8,21 @@ import React, { useRef, useState } from "react";
 
 const plans = [
   {
-    name: "Starter",
+    name: "Feature",
     description:
       "Perfetto per agenzie che vogliono offrire risultati rapidi e costanti ai propri clienti senza gestire team interni.",
-    price: 950,
-    yearlyPrice: 712,
-    buttonText: "Inizia gratis",
+    price: 1450,
+    yearlyPrice: 1087,
+    buttonText: "Scegli Standard",
     buttonVariant: "outline" as const,
+    capacity: "1 Task alla volta",
+    delivery: "Standard (5-6 gg)",
+    support: "Email",
+    guarantee: false,
     features: [
-      { text: "2 siti business", icon: <Globe size={20} /> },
-      { text: "2 landing page professionali", icon: <Zap size={20} /> },
-      { text: "White label completo", icon: <Headphones size={20} /> },
+      { text: "1 Task alla volta", icon: <Globe size={20} /> },
+      { text: "Consegna Standard (5-6 gg)", icon: <Zap size={20} /> },
+      { text: "Supporto Email", icon: <Headphones size={20} /> },
     ],
     includes: [
       "Design responsive, ottimizzato per la conversione",
@@ -27,42 +31,50 @@ const plans = [
     ],
   },
   {
-    name: "Pro",
+    name: "Standard",
     description:
       "Ideale per agenzie che crescono e vogliono un partner affidabile per gestire più clienti contemporaneamente.",
-    price: 1450,
-    yearlyPrice: 1087,
-    buttonText: "Inizia gratis",
+    price: 1950,
+    yearlyPrice: 1462,
+    buttonText: "INIZIA ORA",
     buttonVariant: "default" as const,
     popular: true,
+    capacity: "1 Task alla volta",
+    delivery: "Accelerata (2-3 gg) ⚡",
+    support: "Priority",
+    guarantee: true,
     features: [
-      { text: "3 siti business", icon: <Globe size={20} /> },
-      { text: "4 landing page ad alte performance", icon: <Zap size={20} /> },
-      { text: "Supporto prioritario", icon: <Headphones size={20} /> },
+      { text: "1 Task alla volta", icon: <Globe size={20} /> },
+      { text: "Consegna Accelerata (2-3 gg) ⚡", icon: <Zap size={20} /> },
+      { text: "Supporto Priority", icon: <Headphones size={20} /> },
     ],
     includes: [
       "Strategia, design e performance in ogni progetto",
       "Tempi di consegna garantiti",
-      "Tutto pronto per la rivendita con il tuo logo",
+      "Garanzia Soddisfatti o Rimborsati (14gg)",
     ],
   },
   {
     name: "Scale",
     description:
       "Pensato per agenzie che gestiscono brand e progetti su larga scala.",
-    price: 2950,
-    yearlyPrice: 2212,
-    buttonText: "Inizia gratis",
+    price: 3950,
+    yearlyPrice: 2962,
+    buttonText: "Contattaci",
     buttonVariant: "outline" as const,
+    capacity: "2 Task alla volta",
+    delivery: "Istantanea (Ove possibile)",
+    support: "Zoom o Chat Diretta",
+    guarantee: true,
     features: [
-      { text: "1 e-commerce completo + 4 siti business", icon: <Globe size={20} /> },
-      { text: "6 landing page premium", icon: <Zap size={20} /> },
-      { text: "Supporto dedicato 7 giorni su 7", icon: <Headphones size={20} /> },
+      { text: "2 Task alla volta", icon: <Globe size={20} /> },
+      { text: "Consegna Istantanea (Ove possibile)", icon: <Zap size={20} /> },
+      { text: "Supporto Zoom o Chat Diretta", icon: <Headphones size={20} /> },
     ],
     includes: [
       "Soluzioni su misura, massima velocità",
       "Dashboard white label per i tuoi clienti",
-      "Automazioni integrate",
+      "Garanzia Soddisfatti o Rimborsati (14gg)",
     ],
   },
 ];
@@ -230,7 +242,7 @@ export default function PricingSection() {
                   {plan.popular && (
                     <div className="">
                       <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-medium">
-                        Più Scelto
+                        Consigliato
                       </span>
                     </div>
                   )}
@@ -257,7 +269,7 @@ export default function PricingSection() {
 
               <CardContent className="pt-0">
                 <a
-                  href="https://calendly.com/pietrocanazza16/smartops?month=2025-11"
+                  href={plan.name === "Scale" ? "mailto:smartoperationsweb@gmail.com" : "https://calendly.com/pietrocanazza16/smartops?month=2025-11"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`block w-full mb-6 p-4 text-xl text-center rounded-xl transition-all duration-300 ${

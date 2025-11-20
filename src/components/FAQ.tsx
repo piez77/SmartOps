@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, HelpCircle, Sparkles } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 const faqs = [
   {
@@ -38,70 +39,198 @@ const faqs = [
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.03),transparent_50%)]"></div>
+    <section className="relative py-32 bg-gradient-to-b from-white via-purple-50/30 to-white overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-purple/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif-display font-bold text-brand-charcoal mb-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-20"
+        >
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, type: "spring" }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 rounded-full mb-6"
+          >
+            <Sparkles className="w-5 h-5 text-brand-purple" />
+            <span className="text-brand-purple font-semibold">FAQ</span>
+          </motion.div>
+
+          <h2 className="text-5xl md:text-6xl font-serif-display font-bold text-brand-charcoal mb-6 bg-gradient-to-r from-brand-purple via-purple-600 to-brand-purple bg-clip-text text-transparent">
             Domande Frequenti
           </h2>
-          <p className="text-xl text-brand-charcoal/70 font-sans-modern">
+          <p className="text-xl text-brand-charcoal/70 font-sans-modern max-w-2xl mx-auto">
             Tutto quello che devi sapere sul nostro servizio
           </p>
-        </div>
+        </motion.div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 mb-16">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
-              className="border border-gray-200 rounded-xl overflow-hidden bg-white hover:shadow-md transition-shadow duration-300"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              className="relative group"
             >
-              <button
-                onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-purple-50/50 transition-colors duration-200"
-              >
-                <span className="font-semibold text-lg text-brand-charcoal font-sans-modern">
-                  {faq.question}
-                </span>
-                <ChevronDown
-                  className={`w-6 h-6 text-brand-purple flex-shrink-0 transition-transform duration-300 ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
-                />
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+              <motion.div
+                whileHover={{ scale: 1.01 }}
+                transition={{ duration: 0.2 }}
+                className={`relative border-2 rounded-2xl overflow-hidden bg-white shadow-lg transition-all duration-300 ${
+                  openIndex === index
+                    ? 'border-brand-purple shadow-2xl shadow-brand-purple/20'
+                    : hoveredIndex === index
+                    ? 'border-purple-300 shadow-xl shadow-purple-100'
+                    : 'border-gray-200 hover:border-purple-200'
                 }`}
               >
-                <div className="px-6 pb-5 text-brand-charcoal/80 font-sans-modern leading-relaxed whitespace-pre-line">
-                  {faq.answer}
-                </div>
-              </div>
-            </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-purple/5 via-purple-400/5 to-brand-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="relative w-full px-8 py-6 text-left flex items-center justify-between gap-4 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-4 flex-1">
+                    <motion.div
+                      animate={{
+                        rotate: hoveredIndex === index ? 360 : 0,
+                        scale: hoveredIndex === index ? 1.1 : 1
+                      }}
+                      transition={{ duration: 0.3 }}
+                      className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        openIndex === index
+                          ? 'bg-gradient-to-br from-brand-purple to-purple-600 text-white shadow-lg shadow-brand-purple/30'
+                          : 'bg-purple-100 text-brand-purple'
+                      }`}
+                    >
+                      <HelpCircle className="w-5 h-5" />
+                    </motion.div>
+
+                    <span className={`font-semibold text-lg font-sans-modern transition-colors duration-300 ${
+                      openIndex === index ? 'text-brand-purple' : 'text-brand-charcoal group-hover:text-brand-purple'
+                    }`}>
+                      {faq.question}
+                    </span>
+                  </div>
+
+                  <motion.div
+                    animate={{
+                      rotate: openIndex === index ? 180 : 0,
+                      scale: hoveredIndex === index ? 1.2 : 1
+                    }}
+                    transition={{ duration: 0.3, type: "spring" }}
+                    className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                      openIndex === index
+                        ? 'bg-brand-purple text-white'
+                        : 'bg-gray-100 text-gray-600 group-hover:bg-purple-100 group-hover:text-brand-purple'
+                    }`}
+                  >
+                    <ChevronDown className="w-5 h-5" />
+                  </motion.div>
+                </button>
+
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <motion.div
+                        initial={{ y: -10 }}
+                        animate={{ y: 0 }}
+                        exit={{ y: -10 }}
+                        transition={{ duration: 0.3 }}
+                        className="px-8 pb-6 pl-[4.5rem]"
+                      >
+                        <div className="relative">
+                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-purple to-purple-400 rounded-full"></div>
+                          <p className="text-brand-charcoal/80 font-sans-modern leading-relaxed whitespace-pre-line pl-6">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </motion.div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <p className="text-lg text-brand-charcoal/70 mb-6 font-sans-modern">
-            Hai altre domande? Siamo qui per aiutarti.
-          </p>
-          <a
-            href="https://calendly.com/pietrocanazza16/smartops?month=2025-11"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-brand-purple text-white rounded-xl font-semibold text-lg hover:bg-brand-purple/90 transition-all hover:shadow-lg"
-          >
-            Prenota una Chiamata
-          </a>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center relative"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-purple/10 to-transparent blur-xl"></div>
+
+          <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-12 border-2 border-purple-200 shadow-2xl">
+            <motion.div
+              animate={{
+                rotate: [0, 5, -5, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="inline-block mb-6"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-brand-purple to-purple-600 rounded-2xl flex items-center justify-center shadow-lg shadow-brand-purple/30">
+                <HelpCircle className="w-8 h-8 text-white" />
+              </div>
+            </motion.div>
+
+            <h3 className="text-3xl font-serif-display font-bold text-brand-charcoal mb-4">
+              Hai altre domande?
+            </h3>
+            <p className="text-lg text-brand-charcoal/70 mb-8 font-sans-modern max-w-xl mx-auto">
+              Siamo qui per aiutarti. Prenota una chiamata gratuita e scopri come possiamo far crescere insieme la tua agenzia.
+            </p>
+
+            <motion.a
+              href="https://calendly.com/pietrocanazza16/smartops?month=2025-11"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-brand-purple via-purple-600 to-brand-purple bg-size-200 bg-pos-0 hover:bg-pos-100 rounded-2xl font-bold text-xl text-white transition-all duration-500 shadow-2xl shadow-brand-purple/40 hover:shadow-3xl hover:shadow-brand-purple/60 relative overflow-hidden group"
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></span>
+              <span className="relative">Prenota una Chiamata</span>
+              <motion.span
+                animate={{ x: [0, 4, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                className="relative"
+              >
+                →
+              </motion.span>
+            </motion.a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

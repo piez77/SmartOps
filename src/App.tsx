@@ -19,8 +19,8 @@ function HomePage() {
       <Services />
       <PortfolioGrid items={portfolioItems} />
       <PricingSection />
-      <FAQ />
       <FinalCTA />
+      <FAQ />
     </>
   );
 }

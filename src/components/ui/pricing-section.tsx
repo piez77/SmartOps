@@ -8,73 +8,72 @@ import React, { useRef, useState } from "react";
 
 const plans = [
   {
-    name: "Feature",
+    name: "STANDARD",
     description:
-      "Perfetto per agenzie che vogliono offrire risultati rapidi e costanti ai propri clienti senza gestire team interni.",
+      "Perfetto per agenzie che vogliono risultati affidabili senza assumere personale.",
     price: 1450,
     yearlyPrice: 1087,
+    projectsPerMonth: "2 progetti al mese",
     buttonText: "Scegli Standard",
     buttonVariant: "outline" as const,
-    capacity: "1 Task alla volta",
-    delivery: "Standard (5-6 gg)",
+    capacity: "1 progetto attivo alla volta",
+    delivery: "5–6 giorni",
     support: "Email",
     guarantee: false,
     features: [
-      { text: "1 Task alla volta", icon: <Globe size={20} /> },
-      { text: "Consegna Standard (5-6 gg)", icon: <Zap size={20} /> },
-      { text: "Supporto Email", icon: <Headphones size={20} /> },
+      { text: "1 progetto attivo alla volta", icon: <Globe size={20} /> },
+      { text: "Consegna in 5–6 giorni", icon: <Zap size={20} /> },
+      { text: "Supporto via Email", icon: <Headphones size={20} /> },
     ],
     includes: [
-      "Design responsive, ottimizzato per la conversione",
-      "Consegne rapide, revisione inclusa",
-      "Il tuo brand, il nostro lavoro",
+      "Landing page, siti business, funnel",
     ],
   },
   {
-    name: "Standard",
+    name: "GROWTH",
     description:
-      "Ideale per agenzie che crescono e vogliono un partner affidabile per gestire più clienti contemporaneamente.",
+      "Ideale per agenzie in crescita che vogliono più capacità senza aumentare i costi fissi.",
     price: 1950,
     yearlyPrice: 1462,
+    projectsPerMonth: "4 progetti al mese",
     buttonText: "INIZIA ORA",
     buttonVariant: "default" as const,
     popular: true,
-    capacity: "1 Task alla volta",
-    delivery: "Accelerata (2-3 gg) ⚡",
-    support: "Priority",
+    badge: "Più scelto",
+    capacity: "1 progetto attivo alla volta",
+    delivery: "2–3 giorni",
+    support: "Priority via chat o Zoom",
     guarantee: true,
     features: [
-      { text: "1 Task alla volta", icon: <Globe size={20} /> },
-      { text: "Consegna Accelerata (2-3 gg) ⚡", icon: <Zap size={20} /> },
-      { text: "Supporto Priority", icon: <Headphones size={20} /> },
+      { text: "1 progetto attivo alla volta", icon: <Globe size={20} /> },
+      { text: "Consegna in 2–3 giorni", icon: <Zap size={20} /> },
+      { text: "Supporto Priority via chat o Zoom", icon: <Headphones size={20} /> },
     ],
     includes: [
-      "Strategia, design e performance in ogni progetto",
-      "Tempi di consegna garantiti",
-      "Garanzia Soddisfatti o Rimborsati (14gg)",
+      "Landing page, siti business, funnel",
+      "Miglior rapporto capacità/prezzo",
     ],
   },
   {
-    name: "Scale",
+    name: "SCALE",
     description:
-      "Pensato per agenzie che gestiscono brand e progetti su larga scala.",
+      "Per agenzie strutturate che gestiscono più brand e progetti contemporaneamente.",
     price: 3950,
     yearlyPrice: 2962,
+    projectsPerMonth: "8 progetti al mese",
     buttonText: "Contattaci",
     buttonVariant: "outline" as const,
-    capacity: "2 Task alla volta",
-    delivery: "Istantanea (Ove possibile)",
-    support: "Zoom o Chat Diretta",
+    capacity: "3 progetti attivi alla volta",
+    delivery: "2–3 giorni",
+    support: "Zoom o Chat",
     guarantee: true,
     features: [
-      { text: "2 Task alla volta", icon: <Globe size={20} /> },
-      { text: "Consegna Istantanea (Ove possibile)", icon: <Zap size={20} /> },
-      { text: "Supporto Zoom o Chat Diretta", icon: <Headphones size={20} /> },
+      { text: "3 progetti attivi alla volta", icon: <Globe size={20} /> },
+      { text: "Consegna in 2–3 giorni", icon: <Zap size={20} /> },
+      { text: "Supporto via Zoom o Chat", icon: <Headphones size={20} /> },
     ],
     includes: [
-      "Soluzioni su misura, massima velocità",
-      "Dashboard white label per i tuoi clienti",
-      "Garanzia Soddisfatti o Rimborsati (14gg)",
+      "Landing page, siti business, funnel",
     ],
   },
 ];
@@ -235,14 +234,14 @@ export default function PricingSection() {
               }`}
             >
               <CardHeader className="text-left">
-                <div className="flex justify-between">
+                <div className="flex justify-between items-start">
                   <h3 className="text-3xl font-serif-display font-semibold text-gray-900 mb-2">
                     {plan.name}
                   </h3>
                   {plan.popular && (
                     <div className="">
                       <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-medium">
-                        Consigliato
+                        {plan.badge || "Consigliato"}
                       </span>
                     </div>
                   )}
@@ -261,6 +260,9 @@ export default function PricingSection() {
                       /mese
                     </span>
                   </div>
+                  <p className="text-base font-medium text-brand-purple mt-2">
+                    {plan.projectsPerMonth}
+                  </p>
                   {isYearly && (
                     <p className="text-sm text-gray-500 mt-1">fatturati annualmente</p>
                   )}

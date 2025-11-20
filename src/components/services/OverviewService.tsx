@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 
 const problems = [
-  "Ritardi che causano penali, rinnovi mancati e clienti persi",
-  "Qualità incostante: design bello ma codice scadente, SEO non ottimizzato, landing non performanti",
+  "Ritardi che portano a penali, rinnovi mancati e clienti persi",
+  "Qualità incostante: design bellissimo ma codice scadente, SEO non curato, landing che non convertono",
   "Controllo del brand compromesso quando il fornitore parla direttamente col cliente",
-  "Costi nascosti e scope creep che erodono i margini",
-  "Tempo sprecato nel coordinare più freelance e risolvere bug che non avrebbero dovuto esistere"
+  "Costi imprevedibili che mangiano i margini mese dopo mese",
+  "Tempo sprecato per coordinare freelance, risolvere bug e rincorrere consegne"
 ];
 
 export function OverviewService() {
@@ -44,15 +44,16 @@ export function OverviewService() {
           }`}
         >
           <h2 className="text-3xl md:text-5xl font-serif-display font-bold mb-6 text-brand-charcoal leading-tight">
-            100% DI MARGINI 0% DELLO STRESS
-            
+            <span className="block mb-2">100% DI MARGINI</span>
+            <span className="block">0% DELLO STRESS</span>
           </h2>
           <p
             className={`text-xl md:text-2xl text-brand-charcoal/80 max-w-4xl mx-auto font-sans-modern transition-all duration-1000 delay-200 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            Servizi web white-label per agenzie che vogliono crescere, consegnare puntuali e mantenere il proprio brand al centro. Voi vendete, noi realizziamo.
+            Servizi web white-label per agenzie che vogliono crescere, consegnare puntuali e mantenere il proprio brand al centro.<br />
+            Voi vendete. Noi realizziamo.
           </p>
         </div>
 
@@ -62,23 +63,37 @@ export function OverviewService() {
           }`}
         >
           <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
-            Ogni agenzia conosce questa storia. Il progetto parte bene. Poi arrivano i ritardi. Le revisioni infinite. I clienti impazienti.
+            Ogni agenzia conosce questa storia.<br />
+            Il progetto parte bene. Poi arrivano i ritardi, le revisioni infinite, i clienti impazienti.
           </p>
 
           <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
-            Coordinare freelance è un incubo. Costruire un team interno costa troppo: stipendi, gestione, tempo. Le piccole e medie agenzie non possono permetterselo.
+            Coordinare freelance è un incubo.<br />
+            Costruire un team interno è ancora peggio: costi alti, gestione complessa, rallentamenti continui.<br />
+            Nel frattempo, il costo dell'acquisizione cresce e ogni click sprecato diventa un problema reale.
           </p>
 
           <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
-            <strong className="text-brand-purple">Il risultato?</strong> Margini erosi. Reputazione a rischio. Meno tempo per far crescere i clienti e l'agenzia.
+            <strong className="text-brand-purple">Il risultato?</strong><br />
+            Margini erosi. Reputazione a rischio.<br />
+            Meno tempo per far crescere i clienti e l'agenzia.
           </p>
 
           <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
-            Noi offriamo soluzioni diverse. La solidità di un team interno. Senza costi fissi esorbitanti. Consegne rapide. Qualità costante. Processi trasparenti.
+            Noi offriamo una strada diversa.<br />
+            La solidità di un team interno, senza costi fissi.<br />
+            Consegne rapide, qualità costante, processi chiari.<br />
+            Un servizio in abbonamento che elimina preventivi lunghi, sorprese e sprechi di budget.
           </p>
 
           <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
-            Tutto sotto il vostro marchio. Come se lo aveste fatto voi. Dite addio al caos. Tornate a vendere, creare strategie e far crescere il business.
+            Tutto sotto il vostro marchio.<br />
+            Come se lo aveste fatto voi.
+          </p>
+
+          <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
+            Dite addio al caos.<br />
+            Tornate a vendere, creare strategie e far crescere il business.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
@@ -106,6 +121,9 @@ export function OverviewService() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
+          <h3 className="text-2xl md:text-3xl font-serif-display font-bold mb-8 text-brand-charcoal text-center">
+            I problemi che eliminiamo per sempre
+          </h3>
           <ul className="space-y-6">
             {problems.map((problem, index) => (
               <li

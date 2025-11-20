@@ -26,7 +26,9 @@ const plans = [
       { text: "Supporto via Email", icon: <Headphones size={20} /> },
     ],
     includes: [
-      "Landing page, siti business, funnel",
+      "Landing page ottimizzate per la conversione",
+      "Siti business ottimizzati SEO",
+      "Funnel completi integrati con CRM",
     ],
   },
   {
@@ -40,18 +42,20 @@ const plans = [
     buttonVariant: "default" as const,
     popular: true,
     badge: "Più scelto",
-    capacity: "1 progetto attivo alla volta",
+    capacity: "2 progetti attivi alla volta",
     delivery: "2–3 giorni",
     support: "Priority via chat o Zoom",
     guarantee: true,
     features: [
-      { text: "1 progetto attivo alla volta", icon: <Globe size={20} /> },
+      { text: "2 progetti attivi alla volta", icon: <Globe size={20} /> },
       { text: "Consegna in 2–3 giorni", icon: <Zap size={20} /> },
       { text: "Supporto Priority via chat o Zoom", icon: <Headphones size={20} /> },
     ],
     includes: [
-      "Landing page, siti business, funnel",
-      "Miglior rapporto capacità/prezzo",
+      "Landing page ottimizzate per la conversione",
+      "Siti business ottimizzati SEO",
+      "Funnel completi integrati con CRM",
+      "Miglior rapporto qualità/prezzo",
     ],
   },
   {
@@ -73,7 +77,9 @@ const plans = [
       { text: "Supporto via Zoom o Chat", icon: <Headphones size={20} /> },
     ],
     includes: [
-      "Landing page, siti business, funnel",
+      "Landing page ottimizzate per la conversione",
+      "Siti business ottimizzati SEO",
+      "Funnel completi integrati con CRM",
     ],
   },
 ];

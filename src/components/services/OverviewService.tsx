@@ -6,7 +6,10 @@ const problems = [
   "Qualità incostante: design bello ma codice scadente, SEO non ottimizzato, landing non performanti",
   "Controllo del brand compromesso quando il fornitore parla direttamente col cliente",
   "Costi nascosti e scope creep che erodono i margini",
-  "Tempo sprecato nel coordinare più freelance e risolvere bug che non avrebbero dovuto esistere"
+  "Tempo sprecato nel coordinare più freelance e risolvere bug che non avrebbero dovuto esistere",
+  "Il costo dell'acquisizione (CAC) è esploso del 20-30% nel 2024 — ogni click sprecato su landing lente o brutte è budget pubblicitario bruciato",
+  "Assumere un senior developer costa €3.500/mese (€35-50k/anno tra stipendio, tasse, TFR, ferie) — con SmartOps risparmi il 57% senza rischi di licenziamento",
+  "Le aziende preferiscono costi fissi prevedibili (Opex) rispetto a preventivi variabili che sforano sempre — il modello subscription è lo standard B2B"
 ];
 
 export function OverviewService() {

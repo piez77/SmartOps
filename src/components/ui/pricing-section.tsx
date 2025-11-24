@@ -24,16 +24,16 @@ const plans = [
       { text: "2 revisioni", icon: <Headphones size={20} /> },
     ],
     includes: [
-      "Copy + design AI-powered",
+      "Copy + design mobile first",
       "Lead form + email notification",
-      "Hosting + dominio tecnico inclusi",
+      "Hosting + dominio inclusi",
       "Ottimizzazione velocità",
       "Integrazione icone social",
     ],
   },
   {
     name: "GROW",
-    subtitle: "Business Website (fino a 5 pagine)",
+    subtitle: "Business Website",
     description:
       "Per agenzie che vogliono offrire siti completi \"chiavi in mano\"",
     price: 650,
@@ -50,10 +50,9 @@ const plans = [
     ],
     includes: [
       "Design professionale full-site",
-      "CRM + integrazione lead capture",
       "Ottimizzazione SEO tecnica",
       "Hosting incluso",
-      "Form di contatto con tracking",
+      "Form di contatto",
     ],
   },
   {
@@ -73,11 +72,11 @@ const plans = [
       { text: "Ottimizzazione conversioni & monitoring setup", icon: <Headphones size={20} /> },
     ],
     includes: [
-      "Funnel completo (opt-in → thank you → offer)",
-      "Integrazione email marketing / autoresponder",
-      "CRM avanzato + tag/segmenti",
+      "Funnel completo (opt-in → thank you → upsell)",
+      "Sales chatbot autoresponder",
+      "Integrazione CRM",
       "Automazioni base",
-      "Sales page + checkout opzionale",
+      "Checkout Stripe",
     ],
   },
 ];

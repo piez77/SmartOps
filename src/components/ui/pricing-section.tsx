@@ -8,78 +8,76 @@ import React, { useRef, useState } from "react";
 
 const plans = [
   {
-    name: "STANDARD",
+    name: "LAUNCH",
+    subtitle: "Landing Page Ultra-Rapida",
     description:
-      "Perfetto per agenzie che vogliono risultati affidabili senza assumere personale.",
-    price: 1450,
-    yearlyPrice: 1087,
-    projectsPerMonth: "2 progetti al mese",
+      "Perfetta per lead gen, eventi, ads, pre-lanci",
+    price: 450,
+    bulkPrice: 360,
     buttonText: "INIZIA ORA",
     buttonVariant: "outline" as const,
-    capacity: "1 progetto attivo alla volta",
-    delivery: "5–6 giorni",
-    support: "Email",
-    guarantee: false,
+    delivery: "48 ore",
+    popular: false,
     features: [
-      { text: "1 progetto attivo alla volta", icon: <Globe size={20} /> },
-      { text: "Consegna in 5–6 giorni", icon: <Zap size={20} /> },
-      { text: "Supporto via Email", icon: <Headphones size={20} /> },
+      { text: "1 Landing Page responsive", icon: <Globe size={20} /> },
+      { text: "Consegna in 48 ore", icon: <Zap size={20} /> },
+      { text: "2 revisioni", icon: <Headphones size={20} /> },
     ],
     includes: [
-      "Landing page ottimizzate per la conversione",
-      "Siti business ottimizzati SEO",
-      "Funnel completi integrati con CRM",
+      "Copy + design AI-powered",
+      "Lead form + email notification",
+      "Hosting + dominio tecnico inclusi",
+      "Ottimizzazione velocità",
+      "Integrazione icone social",
     ],
   },
   {
-    name: "GROWTH",
+    name: "GROW",
+    subtitle: "Business Website (fino a 5 pagine)",
     description:
-      "Ideale per agenzie in crescita che vogliono più capacità senza aumentare i costi fissi.",
-    price: 1950,
-    yearlyPrice: 1462,
-    projectsPerMonth: "4 progetti al mese",
+      "Per agenzie che vogliono offrire siti completi \"chiavi in mano\"",
+    price: 650,
+    bulkPrice: 520,
     buttonText: "INIZIA ORA",
     buttonVariant: "default" as const,
     popular: true,
     badge: "Più scelto",
-    capacity: "2 progetti attivi alla volta",
-    delivery: "2–3 giorni",
-    support: "Priority via chat o Zoom",
-    guarantee: true,
+    delivery: "72 ore",
     features: [
-      { text: "2 progetti attivi alla volta", icon: <Globe size={20} /> },
-      { text: "Consegna in 2–3 giorni", icon: <Zap size={20} /> },
-      { text: "Supporto Priority via chat o Zoom", icon: <Headphones size={20} /> },
+      { text: "Fino a 5 pagine (Home, About, Services, Contact, Blog/Extra)", icon: <Globe size={20} /> },
+      { text: "Consegna in 72 ore", icon: <Zap size={20} /> },
+      { text: "Dashboard admin semplice", icon: <Headphones size={20} /> },
     ],
     includes: [
-      "Landing page ottimizzate per la conversione",
-      "Siti business ottimizzati SEO",
-      "Funnel completi integrati con CRM",
-      "Miglior rapporto qualità/prezzo",
+      "Design professionale full-site",
+      "CRM + integrazione lead capture",
+      "Ottimizzazione SEO tecnica",
+      "Hosting incluso",
+      "Form di contatto con tracking",
     ],
   },
   {
     name: "SCALE",
+    subtitle: "Funnel Completo",
     description:
-      "Per agenzie strutturate che gestiscono più brand e progetti contemporaneamente.",
-    price: 3950,
-    yearlyPrice: 2962,
-    projectsPerMonth: "8 progetti al mese",
+      "Per agenzie che vendono performance: acquisizione, nurturing, conversione",
+    price: 750,
+    bulkPrice: 600,
     buttonText: "INIZIA ORA",
     buttonVariant: "outline" as const,
-    capacity: "3 progetti attivi alla volta",
-    delivery: "2–3 giorni",
-    support: "Zoom o Chat",
-    guarantee: true,
+    delivery: "4–5 giorni",
+    popular: false,
     features: [
-      { text: "3 progetti attivi alla volta", icon: <Globe size={20} /> },
-      { text: "Consegna in 2–3 giorni", icon: <Zap size={20} /> },
-      { text: "Supporto via Zoom o Chat", icon: <Headphones size={20} /> },
+      { text: "Tutto ciò che c'è in Grow", icon: <Globe size={20} /> },
+      { text: "Consegna in 4–5 giorni", icon: <Zap size={20} /> },
+      { text: "Ottimizzazione conversioni & monitoring setup", icon: <Headphones size={20} /> },
     ],
     includes: [
-      "Landing page ottimizzate per la conversione",
-      "Siti business ottimizzati SEO",
-      "Funnel completi integrati con CRM",
+      "Funnel completo (opt-in → thank you → offer)",
+      "Integrazione email marketing / autoresponder",
+      "CRM avanzato + tag/segmenti",
+      "Automazioni base",
+      "Sales page + checkout opzionale",
     ],
   },
 ];
@@ -110,7 +108,7 @@ const PricingSwitch = ({ onSwitch }: { onSwitch: (value: string) => void }) => {
               transition={{ type: "spring", stiffness: 500, damping: 30 }}
             />
           )}
-          <span className="relative">Mensile</span>
+          <span className="relative">Singolo</span>
         </button>
 
         <button
@@ -129,9 +127,9 @@ const PricingSwitch = ({ onSwitch }: { onSwitch: (value: string) => void }) => {
             />
           )}
           <span className="relative flex items-center gap-2">
-            Annuale
+            Bulk
             <span className="rounded-full bg-purple-50 px-2 py-0.5 text-xs font-medium text-black">
-              Risparmia 25%
+              Risparmia 20%
             </span>
           </span>
         </button>
@@ -141,7 +139,7 @@ const PricingSwitch = ({ onSwitch }: { onSwitch: (value: string) => void }) => {
 };
 
 export default function PricingSection() {
-  const [isYearly, setIsYearly] = useState(false);
+  const [isBulk, setIsBulk] = useState(false);
   const [forceVisible, setForceVisible] = useState(false);
   const pricingRef = useRef<HTMLDivElement>(null);
 
@@ -163,7 +161,7 @@ export default function PricingSection() {
   };
 
   const togglePricingPeriod = (value: string) =>
-    setIsYearly(Number.parseInt(value) === 1);
+    setIsBulk(Number.parseInt(value) === 1);
 
   React.useEffect(() => {
     const timer = setTimeout(() => {
@@ -225,6 +223,20 @@ export default function PricingSection() {
         <PricingSwitch onSwitch={togglePricingPeriod} />
       </TimelineContent>
 
+      {isBulk && (
+        <TimelineContent
+          as="div"
+          animationNum={3.5}
+          timelineRef={pricingRef}
+          customVariants={revealVariants}
+          className="text-center mt-4 mb-2"
+        >
+          <p className="text-sm text-gray-600 font-sans-modern bg-purple-50 border border-purple-200 rounded-lg py-2 px-4 inline-block">
+            Minimo 3 progetti acquistati • Prezzi già scontati del 20%
+          </p>
+        </TimelineContent>
+      )}
+
       <div className="grid md:grid-cols-3 max-w-7xl gap-4 py-6 mx-auto">
         {plans.map((plan, index) => (
           <TimelineContent
@@ -240,10 +252,13 @@ export default function PricingSection() {
               }`}
             >
               <CardHeader className="text-left">
-                <div className="flex justify-between items-start">
-                  <h3 className="text-3xl font-serif-display font-semibold text-gray-900 mb-2">
-                    {plan.name}
-                  </h3>
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <h3 className="text-3xl font-serif-display font-semibold text-gray-900">
+                      {plan.name}
+                    </h3>
+                    <p className="text-sm font-medium text-brand-purple mt-1">{plan.subtitle}</p>
+                  </div>
                   {plan.popular && (
                     <div className="">
                       <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -258,26 +273,23 @@ export default function PricingSection() {
                     <span className="text-4xl font-semibold text-gray-900">
                       €
                       <NumberFlow
-                        value={isYearly ? plan.yearlyPrice : plan.price}
+                        value={isBulk ? plan.bulkPrice : plan.price}
                         className="text-4xl font-semibold"
                       />
                     </span>
-                    <span className="text-gray-600 ml-1">
-                      /mese
-                    </span>
                   </div>
                   <p className="text-base font-medium text-brand-purple mt-2">
-                    {plan.projectsPerMonth}
+                    Consegna in {plan.delivery}
                   </p>
-                  {isYearly && (
-                    <p className="text-sm text-gray-500 mt-1">fatturati annualmente</p>
+                  {isBulk && (
+                    <p className="text-sm text-gray-500 mt-1">prezzo per progetto (min. 3)</p>
                   )}
                 </div>
               </CardHeader>
 
               <CardContent className="pt-0">
                 <a
-                  href={plan.name === "Scale" ? "mailto:smartoperationsweb@gmail.com" : "https://calendly.com/pietrocanazza16/smartops?month=2025-11"}
+                  href="https://calendly.com/pietrocanazza16/smartops?month=2025-11"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`block w-full mb-6 p-4 text-xl text-center rounded-xl transition-all duration-300 ${
@@ -290,8 +302,8 @@ export default function PricingSection() {
                 </a>
                 <ul className="space-y-2 font-semibold py-5">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <span className="text-neutral-800 grid place-content-center mt-0.5 mr-3">
+                    <li key={featureIndex} className="flex items-start">
+                      <span className="text-neutral-800 grid place-content-center mt-0.5 mr-3 flex-shrink-0">
                         {feature.icon}
                       </span>
                       <span className="text-sm text-gray-600">
@@ -307,8 +319,8 @@ export default function PricingSection() {
                   </h4>
                   <ul className="space-y-2 font-semibold">
                     {plan.includes.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <span className="h-6 w-6 bg-purple-50 border border-brand-purple rounded-full grid place-content-center mt-0.5 mr-3">
+                      <li key={featureIndex} className="flex items-start">
+                        <span className="h-6 w-6 bg-purple-50 border border-brand-purple rounded-full grid place-content-center mt-0.5 mr-3 flex-shrink-0">
                           <CheckCheck className="h-4 w-4 text-brand-purple " />
                         </span>
                         <span className="text-sm text-gray-600">{feature}</span>
@@ -333,7 +345,7 @@ export default function PricingSection() {
             "La potenza di un team interno. Senza i costi, senza la complessità."
           </p>
           <p className="text-sm text-gray-600 mb-4 font-sans-modern">
-            Progetti singoli disponibili su richiesta
+            Progetti personalizzati o pacchetti su misura disponibili su richiesta
           </p>
           <a
             href="mailto:smartoperationsweb@gmail.com"

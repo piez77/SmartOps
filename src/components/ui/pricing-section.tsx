@@ -75,7 +75,6 @@ const plans = [
       "Funnel completo (opt-in → thank you → upsell)",
       "Sales chatbot autoresponder",
       "Integrazione CRM",
-      "Automazioni base",
       "Checkout Stripe",
     ],
   },

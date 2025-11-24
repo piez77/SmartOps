@@ -46,7 +46,7 @@ const plans = [
     features: [
       { text: "Fino a 5 pagine (Home, About, Services, Contact, Blog/Extra)", icon: <Globe size={20} /> },
       { text: "Consegna in 72 ore", icon: <Zap size={20} /> },
-      { text: "Dashboard admin semplice", icon: <Headphones size={20} /> },
+      { text: "3 revisioni", icon: <Headphones size={20} /> },
     ],
     includes: [
       "Design professionale full-site",

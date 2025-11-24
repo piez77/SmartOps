@@ -26,7 +26,7 @@ const plans = [
     includes: [
       "Copy + design mobile first",
       "Lead form + email notification",
-      "Hosting + dominio inclusi",
+      "Hosting incluso",
       "Ottimizzazione velocità",
       "Integrazione icone social",
     ],

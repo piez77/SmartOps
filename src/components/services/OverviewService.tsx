@@ -81,9 +81,9 @@ export function OverviewService() {
 
           <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">
             Noi offriamo una strada diversa.<br />
-            La solidità di un team interno, senza costi fissi.<br />
+            La solidità di un team intero, senza costi fissi o complessità operative.<br />
             Consegne rapide, qualità costante, processi chiari.<br />
-            Un servizio in abbonamento che elimina preventivi lunghi, sorprese e sprechi di budget.
+            Prezzi trasparenti che eliminano preventivi lunghi, sorprese e sprechi di budget.
           </p>
 
           <p className="text-brand-charcoal/70 text-lg leading-relaxed mb-6">

@@ -30,10 +30,6 @@ const faqs = [
   {
     question: "Come si avvia un progetto?",
     answer: "Dopo l'attivazione del piano compili un form dedicato con le informazioni base del business e del progetto.\nTi basta quello: da lì partiamo noi."
-  },
-  {
-    question: "Posso mettere in pausa o cambiare piano?",
-    answer: "Sì.\nPuoi mettere in pausa l'abbonamento o cambiare piano pagando la differenza in qualsiasi momento."
   }
 ];
 
